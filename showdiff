@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+file1=$1
+file2=$2
+
+[[ $# -ne 2 ]]  && { echo -e "\n\tUsage: \t$0 file1 file2\n"; exit 1; }
+
+while read line
+do
+
+        if ! grep -q "${line%% .*}" $file1; then
+                echo "${line}"
+        fi
+
+done < $file2
+
