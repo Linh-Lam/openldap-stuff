@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Enter group's name:"
 read userinput
-echo "dn: mail=${userinput},ou=Groups,ou=GoogleAppsGroups,dc=atlassian,dc=com
+echo "dn: mail=${userinput},ou=Groups,dc=example,dc=com
 changetype: add
 objectClass: distributionList
 objectClass: top
